@@ -1,0 +1,16 @@
+def modulo_no_div(x,y)
+  until x < y
+    z = x-y
+    x = z
+  end
+  puts x
+end
+
+modulo_no_div(17,5)
+puts 17 % 5
+
+modulo_no_div(34,6)
+puts 34 % 6
+
+modulo_no_div(23,7)
+puts 23 % 7
