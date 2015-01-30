@@ -1,7 +1,7 @@
 # Determine if string contains all unique characters
 
 def unique(string)
-  letters = string.split("")
+  letters = string.downcase.split("")
   check_array = []
 
   letters.each do |char|
@@ -13,4 +13,18 @@ def unique(string)
   end
 
   return true
+end
+
+# Without using seperate data structure
+
+def unique_no_array(string)
+  letters = string.downcase.split("")
+  unique = true
+
+  letters.each do |char|
+    if letters.count(char) > 1
+      unique = false
+    end
+  end
+  return unique
 end
